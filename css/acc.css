@@ -1,0 +1,61 @@
+
+.linline{
+  display: flex;
+  position: relative;
+}
+.linline li{
+  list-style: none;
+}
+
+.linline a{
+  text-decoration: none;
+  margin-left: 30px;
+  font-weight: 700;
+}
+
+
+
+
+.texte {
+  padding: 5px 5px;
+  margin: 5px;
+  border: 1mm ridge black;
+  background: #506e98;
+}
+
+h3,h2{
+  text-align: center;
+}
+
+h1{
+  text-align: center;
+}
+
+img{
+  height: 135px;
+  border: 1mm ridge slategrey ;
+}
+
+.txt2 {
+  padding: 5px 15px;
+  margin: 15px;
+  background: skyblue;
+}
+
+.bout {
+  padding: 15px 100px;
+  margin: 20px 184px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  background: #E6E6FA;
+  border: 1px solid black;
+}
+ body{
+  background: #d4e6f1;
+
+ }
+
+ .mar{
+  color: blue;
+ }

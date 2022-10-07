@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mise en forme</title>
+    <link rel="stylesheet" href="css/acc.css">
+    <link rel="stylesheet" href="css/cct.css">
+    <script type="text/javascript">
+      
+      function num(v){
+  var i,c;
+  for (i = 0; i < v.length; i++) {
+    c=v.charAt(i);
+    if( c<'0' || c>'9' ){
+      return false;
+    }
+  }
+  return true;
+}
+
+function vnom(v){
+  var i,c;
+  for (i = 0; i < v.length; i++) {
+    c=v.charAt(i);
+    if( c!=/^[a-zA-Z-\s]+$/ ){
+      return false;
+    }
+  }
+  return true;
+}
+
+function vprenom(v){
+  var i,c;
+  for (i = 0; i < v.length; i++) {
+    c=v.charAt(i);
+    if( c!=/^[a-zA-Z-\s]+$/ ){
+      return false;
+    }
+  }
+  return true;
+}
+
+function message(v){
+    var tab = message.v.split(' ');
+    if (tab.length < 2) {
+      alert("L'adresse est erronée");
+      return false;
+    }
+    return true;
+}
+
+
+function verifierDonnees(form1) {
+  var nm=document.getElementById("nom"),
+    pnm=document.getElementById("prenom"),
+    tel=document.getElementById("telephone"),
+    msg=document.getElementById("message");
+
+  if ( vnom(nm) && vprenom(pnm) && num(tel) && message(msg)){
+    alert("Le formulaire est correct");
+    return true;
+  } else{
+    alert("Le formulaire est incorrect")
+    return false;
+  }
+
+}
+
+    </script>
+  </head>
+  <body>
+    
+  <div class="txt2">
+    <h1><span class="mar" >PIC</span>shop</h1>
+    <ul class="linline">
+
+    <li><a href="acc.html">Home</a></li>
+    <li><a href="visiteur.php"> Boutique </a></li>
+    <li><a href="faq.html"> F.a.q </a></li>
+    <li><a href="contact.html"> Contact </a></li>
+    <li><a href="login.php">
+      <input type="button" value="connexion">
+      </a>
+    </li>
+    <li><a href="inscription.php">
+      <input type="button" value="inscription">
+      </a>
+    </li>
+  
+    </ul>
+    <hr/>
+      
+    <form id="form1" action="" onsubmit="return verifierDonnees()" novalidate="novalidate" >
+      
+      </div>
+
+        <div class="cont">
+
+        <label><input type="radio" name="civilite" id="mme" value="mme" />Madame</label>
+        <label><input type="radio" name="civilite" id="m" value="m" />Monsieur</label><br>
+        
+        <label for="nom">Nom</label><input type="text" id="nom" required /><br>
+        
+        <label for="prenom">Prénom</label><input type="text" id="prenom" required /><br>
+        
+        <label for="telephone">téléphone</label><input type="text" id="telephone" required /><br>
+        
+        <label for="message">message</label><textarea id="message" rows="2" cols="50" required></textarea>
+        <hr/>
+        <input type="submit" value="Soumettre" />
+        </div>
+
+      </div>
+
+    </form>
+    <div>
+    <hr/><a href="index.html">
+    <input class="bout" type="button" value="retour">
+    </a>
+  </div>
+    <hr/>
+  <div class="txt2">
+    <h5>Informations</h5>
+    <ul>
+      <li>66 rue des docteurs charcots</li>
+      <li>42100 Saint-Etienne</li>
+      <li>info@picshop.com</li>
+      <li>+33 7 56 58 44 09</li>
+    </ul>
+  </div>
+
+  </body>
+</html>
